@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="del_wrap">
+    <form action="" method="post" enctype="multipart/form-data">
+        <h1>Вы уверены что хотите удалить фильм?</h1>
+        {% csrf_token %}
+        <input type="submit" value="delete">
+    </form>
+    <a href="http://127.0.0.1:8000/notes/">back</a>
+</div>
+<style>
+    .del_wrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+</style>
+
+
+
+</body>
+</html>

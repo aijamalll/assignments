@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center>
+{% for i in object_list %}
+        <div class="note">
+            <h3 class="notes_title">{{i.title_note}}</h3>
+            <p class="notes_text">{{i.text_note}}</p>
+            <div class="notes_bottom">
+                <div>
+                    <a class="notes_edit" href="/notes/{{i.id}}/update_note/">Edit</a>
+                    <a class="notes_del" href="/notes/{{i.id}}/delete_note/">Delete</a>
+                </div>
+                <p class="notes_date">{{i.date_note}}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+<a href="http://127.0.0.1:8000/notes/add_note/"  style="font-size:3rem; color: blue;">Create</a>
+        </center>
+</body>
+</html>

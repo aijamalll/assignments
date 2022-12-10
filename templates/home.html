@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema</title>
+</head>
+
+<body>
+    <div>
+        <center>
+            {% for i in object_list %}
+            <hr>
+            <img src="{{i.image.url}}" alt="pic" style="width:300px; height:350px;">
+            <h2>{{i.title}}</h2>
+            <p>{{i.genre}}</p>
+            <a href="/cinema/{{i.id}}">Подробнее</a>
+            {% endfor %}
+        </center>
+    </div>
+</body>
+
+</html>

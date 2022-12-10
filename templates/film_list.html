@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+
+<center>
+    <h1>Книги 2022</h1>
+    {% for i in object_list %}
+    <img src="{{i.image}}" alt="" width="400" height="450">
+    <p>
+        <h2>{{i.title_text}}</h2>
+        <h2><a href="{{i.title}}">Подробнее...</a></h2>
+    </p>
+    {% endfor %}
+</center>
+</body>
+</html>
